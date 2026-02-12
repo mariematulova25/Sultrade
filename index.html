@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prezentace Projektu</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Arial, sans-serif;
+            background-color: #ffffff; /* Čisté bílé pozadí */
+            margin: 0;
+            padding: 40px 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        h1 { color: #1a1a1a; font-weight: 300; letter-spacing: 1px; }
+
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr); /* 2 obrázky vedle sebe */
+            gap: 30px;
+            max-width: 1200px;
+        }
+
+        /* Responzivita: na mobilu bude jen 1 sloupec */
+        @media (max-width: 768px) {
+            .gallery { grid-template-columns: 1fr; }
+        }
+
+        .card {
+            border: 1px solid #eee;
+            padding: 10px;
+            background: #fff;
+            transition: all 0.3s ease;
+        }
+
+        .card:hover {
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+        }
+
+        .card img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .label {
+            margin-top: 10px;
+            font-size: 0.85rem;
+            color: #666;
+            text-transform: uppercase;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>ARCHITEKTONICKÝ PASSPORT</h1>
+    <p>Návrh vizualizací exteriéru a interiéru</p>
+</header>
+
+<div class="gallery">
+    <div class="card">
+        <img src="1.png" alt="Vizualizace 1">
+        <div class="label">Pohled 01</div>
+    </div>
+    <div class="card">
+        <img src="2.png" alt="Vizualizace 2">
+        <div class="label">Pohled 02</div>
+    </div>
+    <div class="card">
+        <img src="3.png" alt="Vizualizace 3">
+        <div class="label">Pohled 03</div>
+    </div>
+    <div class="card">
+        <img src="4.png" alt="Vizualizace 4">
+        <div class="label">Pohled 04</div>
+    </div>
+</div>
+
+</body>
+</html>
