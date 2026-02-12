@@ -38,15 +38,23 @@
             letter-spacing: 2px;
             margin-top: 0;
         }
-
         .gallery {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-            gap: 40px;
-            max-width: 1200px;
-            width: 95%;
-        }
+    display: grid;
+    /* Tady je ta hlavní změna: říkáme 'vytvoř 2 sloupce, každý o stejné šířce' */
+    grid-template-columns: repeat(2, 1fr); 
+    gap: 40px;
+    max-width: 1000px; /* Trochu jsme zúžili max. šířku pro lepší vzhled 2x2 */
+    width: 95%;
+}
 
+/* Toto zajistí, že na mobilu budou obrázky stále hezky pod sebou v jednom sloupci */
+@media (max-width: 600px) {
+    .gallery {
+        grid-template-columns: 1fr;
+    }
+}
+
+      
         .card {
             background: #1e1e1e; /* Mírně světlejší pozadí karty */
             border: 1px solid #333; /* Decentní ohraničení */
@@ -113,3 +121,4 @@
 
 </body>
 </html>
+
