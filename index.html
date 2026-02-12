@@ -3,11 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Prezentace Projektu</title>
+    <title>Sultrade | Prezentace projektu</title>
     <style>
+        /* Dark Mode nastavení */
         body {
-            font-family: 'Segoe UI', Arial, sans-serif;
-            background-color: #ffffff; /* Čisté bílé pozadí */
+            font-family: 'Segoe UI', Helvetica, Arial, sans-serif;
+            background-color: #121212; /* Velmi tmavá šedá */
+            color: #e0e0e0; /* Světlé písmo pro kontrast */
             margin: 0;
             padding: 40px 20px;
             display: flex;
@@ -17,32 +19,44 @@
 
         header {
             text-align: center;
-            margin-bottom: 50px;
+            margin-bottom: 60px;
         }
 
-        h1 { color: #1a1a1a; font-weight: 300; letter-spacing: 1px; }
+        /* Nápis Sultrade */
+        .brand {
+            font-size: 0.9rem;
+            letter-spacing: 4px;
+            color: #888;
+            text-transform: uppercase;
+            margin-bottom: 10px;
+            display: block;
+        }
+
+        h1 { 
+            color: #ffffff; 
+            font-weight: 200; 
+            letter-spacing: 2px;
+            margin-top: 0;
+        }
 
         .gallery {
             display: grid;
-            grid-template-columns: repeat(2, 1fr); /* 2 obrázky vedle sebe */
-            gap: 30px;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 40px;
             max-width: 1200px;
-        }
-
-        /* Responzivita: na mobilu bude jen 1 sloupec */
-        @media (max-width: 768px) {
-            .gallery { grid-template-columns: 1fr; }
+            width: 95%;
         }
 
         .card {
-            border: 1px solid #eee;
-            padding: 10px;
-            background: #fff;
-            transition: all 0.3s ease;
+            background: #1e1e1e; /* Mírně světlejší pozadí karty */
+            border: 1px solid #333; /* Decentní ohraničení */
+            padding: 0;
+            transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
         }
 
         .card:hover {
-            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+            transform: scale(1.02);
+            border-color: #555;
         }
 
         .card img {
@@ -52,40 +66,50 @@
         }
 
         .label {
-            margin-top: 10px;
-            font-size: 0.85rem;
-            color: #666;
+            padding: 20px;
+            font-size: 0.8rem;
+            color: #aaa;
             text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        footer {
+            margin-top: 80px;
+            font-size: 0.7rem;
+            color: #444;
+            letter-spacing: 1px;
         }
     </style>
 </head>
 <body>
 
 <header>
+    <span class="brand">Sultrade</span>
     <h1>ARCHITEKTONICKÝ PASSPORT</h1>
-    <p>Návrh vizualizací exteriéru a interiéru</p>
 </header>
 
 <div class="gallery">
     <div class="card">
         <img src="Img1.png" alt="Vizualizace 1">
-        <div class="label">Pohled 01</div>
+        <div class="label">Pohled 01 / Exteriér</div>
     </div>
     <div class="card">
         <img src="img2.png" alt="Vizualizace 2">
-        <div class="label">Pohled 02</div>
+        <div class="label">Pohled 02 / Interiér</div>
     </div>
     <div class="card">
         <img src="img3.png" alt="Vizualizace 3">
-        <div class="label">Pohled 03</div>
+        <div class="label">Pohled 03 / Detail</div>
     </div>
     <div class="card">
         <img src="img4.png" alt="Vizualizace 4">
-        <div class="label">Pohled 04</div>
+        <div class="label">Pohled 04 / Půdorys</div>
     </div>
 </div>
 
+<footer>
+    &copy; 2024 SULTRADE | VŠECHNA PRÁVA VYHRAZENA
+</footer>
 
 </body>
-
 </html>
