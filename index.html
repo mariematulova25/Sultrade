@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sultrade | Prezentace projektu</title>
+    <title>Sultrade | Architektonický Passport</title>
     <style>
-        /* Dark Mode nastavení */
+        /* Celkové nastavení tmavého režimu */
         body {
             font-family: 'Segoe UI', Helvetica, Arial, sans-serif;
-            background-color: #121212; /* Velmi tmavá šedá */
-            color: #e0e0e0; /* Světlé písmo pro kontrast */
+            background-color: #121212;
+            color: #e0e0e0;
             margin: 0;
             padding: 40px 20px;
             display: flex;
@@ -19,13 +19,12 @@
 
         header {
             text-align: center;
-            margin-bottom: 60px;
+            margin-bottom: 50px;
         }
 
-        /* Nápis Sultrade */
         .brand {
             font-size: 0.9rem;
-            letter-spacing: 4px;
+            letter-spacing: 5px;
             color: #888;
             text-transform: uppercase;
             margin-bottom: 10px;
@@ -36,34 +35,29 @@
             color: #ffffff; 
             font-weight: 200; 
             letter-spacing: 2px;
-            margin-top: 0;
+            margin: 0;
+            text-transform: uppercase;
         }
+
+        /* Mřížka nastavená FIXNĚ na 2 sloupce */
         .gallery {
-    display: grid;
-    /* Tady je ta hlavní změna: říkáme 'vytvoř 2 sloupce, každý o stejné šířce' */
-    grid-template-columns: repeat(2, 1fr); 
-    gap: 40px;
-    max-width: 1000px; /* Trochu jsme zúžili max. šířku pro lepší vzhled 2x2 */
-    width: 95%;
-}
+            display: grid;
+            /* Tento řádek zajistí přesně 2 sloupce na počítači */
+            grid-template-columns: 1fr 1fr; 
+            gap: 30px;
+            max-width: 1100px; /* Šířka celého bloku s obrázky */
+            width: 100%;
+        }
 
-/* Toto zajistí, že na mobilu budou obrázky stále hezky pod sebou v jednom sloupci */
-@media (max-width: 600px) {
-    .gallery {
-        grid-template-columns: 1fr;
-    }
-}
-
-      
         .card {
-            background: #1e1e1e; /* Mírně světlejší pozadí karty */
-            border: 1px solid #333; /* Decentní ohraničení */
-            padding: 0;
-            transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            background: #1e1e1e;
+            border: 1px solid #333;
+            overflow: hidden; /* Aby obrázek nepřetékal přes zaoblení */
+            transition: transform 0.3s ease;
         }
 
         .card:hover {
-            transform: scale(1.02);
+            transform: translateY(-5px);
             border-color: #555;
         }
 
@@ -74,15 +68,23 @@
         }
 
         .label {
-            padding: 20px;
-            font-size: 0.8rem;
-            color: #aaa;
+            padding: 15px;
+            font-size: 0.75rem;
+            color: #999;
             text-transform: uppercase;
             letter-spacing: 1px;
+            background-color: #1a1a1a;
+        }
+
+        /* Responzivita: Na mobilu (šířka pod 768px) skočí obrázky pod sebe */
+        @media (max-width: 768px) {
+            .gallery {
+                grid-template-columns: 1fr;
+            }
         }
 
         footer {
-            margin-top: 80px;
+            margin-top: 60px;
             font-size: 0.7rem;
             color: #444;
             letter-spacing: 1px;
@@ -93,32 +95,32 @@
 
 <header>
     <span class="brand">Sultrade</span>
-    <h1>ARCHITEKTONICKÝ PASSPORT</h1>
+    <h1>Architektonický Passport</h1>
 </header>
 
 <div class="gallery">
     <div class="card">
-        <img src="Img1.png" alt="Vizualizace 1">
+        <img src="Img1.png" alt="Pohled 1">
         <div class="label">Pohled 01 / Exteriér</div>
     </div>
     <div class="card">
-        <img src="img2.png" alt="Vizualizace 2">
+        <img src="img2.png" alt="Pohled 2">
         <div class="label">Pohled 02 / Interiér</div>
     </div>
+    
     <div class="card">
-        <img src="img3.png" alt="Vizualizace 3">
+        <img src="img3.png" alt="Pohled 3">
         <div class="label">Pohled 03 / Detail</div>
     </div>
     <div class="card">
-        <img src="img4.png" alt="Vizualizace 4">
-        <div class="label">Pohled 04 / Půdorys</div>
+        <img src="img4.png" alt="Pohled 4">
+        <div class="label">Pohled 04 / Celek</div>
     </div>
 </div>
 
 <footer>
-    &copy; 2024 SULTRADE | VŠECHNA PRÁVA VYHRAZENA
+    &copy; 2024 SULTRADE | Vytvořeno s precizností
 </footer>
 
 </body>
 </html>
-
